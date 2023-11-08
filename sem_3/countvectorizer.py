@@ -4,9 +4,10 @@ class CountVectorizer:
 
     Attributes:
         lowercase (bool): If True, convert text to lowercase (default is True).
-        separator (str): The separator used to split text into words (default is a space).
-        stop_chars (str or list[str]): Characters to be removed from the text before processing
-            (default is '.,?!').
+        separator (str): The separator used to split text into words
+            (default is a space).
+        stop_chars (str or list[str]): Characters to be removed from the text
+            before processing (default is '.,?!').
 
     Methods:
         remove_chars(document: str) -> str:
@@ -22,7 +23,8 @@ class CountVectorizer:
             Transform a corpus of documents into a term-document matrix.
 
         fit_transform(corpus: list[str]) -> list[list[int]]:
-            Build the vocabulary and transform a corpus of documents into a term-document matrix.
+            Build the vocabulary and transform a corpus of documents
+                into a term-document matrix.
 
         get_feature_names() -> list[str]:
             Get the feature names (vocabulary) as a list.
@@ -37,8 +39,10 @@ class CountVectorizer:
         Initialize the CountVectorizer.
 
         :param lowercase: If True, convert text to lowercase (default is True).
-        :param separator: The separator used to split text into words (default is a space).
-        :param stop_chars: Characters to be removed from the text before processing, either as a string or a list (default is '.,?!').
+        :param separator: The separator used to split text into words
+            (default is a space).
+        :param stop_chars: Characters to be removed from the text
+            before processing as a string or a list (default is '.,?!').
         """
         self.lowercase = lowercase
         self.separator = separator
@@ -101,7 +105,8 @@ class CountVectorizer:
 
     def fit_transform(self, corpus: list[str]) -> list[list[int]]:
         """
-        Build the vocabulary and transform a corpus of documents into a term-document matrix.
+        Build the vocabulary and transform a corpus of documents
+            into a term-document matrix.
 
         :param corpus: List of documents.
         :return: Term-document matrix.

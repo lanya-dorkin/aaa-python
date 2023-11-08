@@ -7,17 +7,20 @@ class TfidfTransformer:
 
     Methods:
         idf_transform(count_matrix: List[List[int]]) -> List[float]:
-            Calculate the Inverse Document Frequency (IDF) values for the given term-document matrix.
+            Calculate the Inverse Document Frequency (IDF) values for
+                the given term-document matrix.
 
         tf_transform(count_matrix: List[List[int]]) -> List[List[float]]:
-            Calculate the Term Frequency (TF) values for the given term-document matrix.
+            Calculate the Term Frequency (TF) values for the
+                given term-document matrix.
 
         fit_transform(count_matrix: List[List[int]]) -> List[List[float]]:
             Transform a term-document matrix into a TF-IDF matrix.
     """
     def idf_transform(self, count_matrix: list[list[int]]) -> list[float]:
         """
-        Calculate the Inverse Document Frequency (IDF) values for the given term-document matrix.
+        Calculate the Inverse Document Frequency (IDF) values for the
+            given term-document matrix.
 
         :param count_matrix: Term-document matrix as a list of lists.
         :return: List of IDF values.
@@ -32,7 +35,8 @@ class TfidfTransformer:
 
     def tf_transform(self, count_matrix: list[list[int]]) -> list[list[float]]:
         """
-        Calculate the Term Frequency (TF) values for the given term-document matrix.
+        Calculate the Term Frequency (TF) values for the
+            given term-document matrix.
 
         :param count_matrix: Term-document matrix as a list of lists.
         :return: List of TF values as a term-document matrix.

@@ -4,19 +4,23 @@ from tfidftransformer import TfidfTransformer
 
 class TfidfVectorizer(CountVectorizer):
     """
-    Transform a collection of text documents into a TF-IDF (Term Frequency-Inverse Document Frequency) matrix.
+    Transform a collection of text documents into a TF-IDF
+        (Term Frequency-Inverse Document Frequency) matrix.
 
     Methods:
         fit_transform(corpus: List[str]) -> List[List[float]]:
             Transform a corpus of text documents into a TF-IDF matrix.
 
         transform(corpus: List[str]) -> List[List[float]]:
-            Transform a corpus of text documents into a TF-IDF matrix based on the existing vocabulary.
+            Transform a corpus of text documents into a TF-IDF matrix
+                based on the existing vocabulary.
 
     Attributes:
         lowercase (bool): If True, convert text to lowercase (default is True).
-        separator (str): The separator used to split text into words (default is a space).
-        stop_chars (str or list[str]): Characters to be removed from the text before processing (default is '.,?!').
+        separator (str): The separator used to split text into words
+            (default is a space).
+        stop_chars (str or list[str]): Characters to be removed from
+            the text before processing (default is '.,?!').
 
     """
     def __init__(
@@ -29,8 +33,10 @@ class TfidfVectorizer(CountVectorizer):
         Initialize the TfidfVectorizer.
 
         :param lowercase: If True, convert text to lowercase (default is True).
-        :param separator: The separator used to split text into words (default is a space).
-        :param stop_chars: Characters to be removed from the text before processing, either as a string or a list (default is '.,?!').
+        :param separator: The separator used to split text into words
+            (default is a space).
+        :param stop_chars: Characters to be removed from the text before
+            processing, either as a string or a list (default is '.,?!').
         """
         super().__init__(lowercase, separator, stop_chars)
         self.tfidf_transformer = TfidfTransformer()
@@ -48,7 +54,8 @@ class TfidfVectorizer(CountVectorizer):
 
     def transform(self, corpus: list[str]) -> list[list[float]]:
         """
-        Transform a corpus of text documents into a TF-IDF matrix based on the existing vocabulary.
+        Transform a corpus of text documents into a TF-IDF matrix
+            based on the existing vocabulary.
 
         :param corpus: List of text documents.
         :return: TF-IDF matrix.
