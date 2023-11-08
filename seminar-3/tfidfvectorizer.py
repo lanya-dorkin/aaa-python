@@ -21,7 +21,6 @@ class TfidfVectorizer(CountVectorizer):
             (default is a space).
         stop_chars (str or list[str]): Characters to be removed from
             the text before processing (default is '.,?!').
-
     """
     def __init__(
         self,
