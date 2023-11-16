@@ -13,10 +13,10 @@ def cli() -> None:
 
 
 @cli.command()
-@click.option(
-    "--delivery", default=False, is_flag=True, help="Include to request delivery"
-)
-@click.option("--pickup", default=False, is_flag=True, help="Include to request pickup")
+@click.option("--delivery", default=False, is_flag=True, 
+              help="Include to request delivery")
+@click.option("--pickup", default=False, is_flag=True, 
+              help="Include to request pickup")
 @click.argument("pizza", type=click.Choice(current_menu.choice))
 @log()
 def order(pizza: str, delivery: bool, pickup: bool) -> None:
