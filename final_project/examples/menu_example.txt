@@ -1,0 +1,7 @@
+>>> python cli.py menu
+МЕНЮ НАШЕЙ ЗАМЕЧАТЕЛЬНОЙ ПИЦЦЕРИИ:
+Margherita 🧀: tomato sauce, mozzarella, tomatoes
+Pepperoni 🍕: tomato sauce, mozzarella, pepperoni
+Hawaiian 🍍: tomato sauce, mozzarella, chicken, pineapples
+Barcelona 🤌: tomato sauce, mozzarella, chorizo, bell peppers, olives
+Myasnaya 🥩: tomato sauce, mozzarella, sausage, bacon, ham
