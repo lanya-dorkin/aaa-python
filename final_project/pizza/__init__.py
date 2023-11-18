@@ -3,11 +3,11 @@ from .pizzas import Margherita, Pepperoni, Hawaiian, Barcelona, Myasnaya
 from .menu import Menu
 
 __all__ = [
-    "Menu",
-    "Pizza",
-    "Margherita",
-    "Pepperoni",
-    "Hawaiian",
-    "Barcelona",
-    "Myasnaya",
+    'Menu',
+    'Pizza',
+    'Margherita',
+    'Pepperoni',
+    'Hawaiian',
+    'Barcelona',
+    'Myasnaya',
 ]

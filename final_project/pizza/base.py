@@ -15,7 +15,7 @@ class Pizza:
         __eq__: Сравнивает два объекта класса Pizza на равенство
     """
 
-    _possible_size = set(["S", "M", "L", "XL"])
+    _possible_size = ['S', 'M', 'L', 'XL']
 
     def __init__(self, size: str = "L") -> None:
         """
@@ -28,7 +28,7 @@ class Pizza:
             ValueError: Невозможно создать пиццу с указанным размером
         """
         if size not in self._possible_size:
-            msg = f"Invalid size. Please use on of {self._possible_size}."
+            msg = f'Invalid size. Please use on of {self._possible_size}.'
             raise ValueError(msg)
         self._size = size
         self._baked = False
@@ -57,7 +57,7 @@ class Pizza:
             new_status (bool): Новый статус выпечки
         """
         if self.baked:
-            msg = "Already baked. Cannot be baked twice!"
+            msg = 'Already baked. Cannot be baked twice!'
             raise ValueError(msg)
         self._baked = new_status
 
@@ -70,7 +70,7 @@ class Pizza:
             new_status (bool): Новый статус обработки
         """
         if self.handled:
-            msg = "Already handled :)"
+            msg = 'Already handled!'
             raise ValueError(msg)
         self._handled = new_status
 
@@ -85,7 +85,7 @@ class Pizza:
     def __eq__(self, other) -> bool:
         """Сравнивает два объекта класса Pizza на равенство"""
         if not isinstance(other, Pizza):
-            raise TypeError("Cannot compare different types")
+            raise TypeError('Cannot compare different types')
 
         name_eq = self.name == other.name
         size_eq = self.size == other.size

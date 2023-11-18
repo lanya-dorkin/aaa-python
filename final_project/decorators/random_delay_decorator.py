@@ -15,7 +15,7 @@ def random_delay(func: Callable) -> Callable:
     """
 
     def wrapper(*args: Any, **kwargs: Any) -> Any:
-        """Обернутая функция с задержкой."""
+        """Обернутая функция с задержкой"""
         delay_time = random.uniform(1, 3)
         time.sleep(delay_time)
         return func(*args, **kwargs)

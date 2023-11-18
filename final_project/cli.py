@@ -13,11 +13,11 @@ def cli() -> None:
 
 
 @cli.command()
-@click.option("--delivery", default=False, is_flag=True, 
-              help="Include to request delivery")
-@click.option("--pickup", default=False, is_flag=True, 
-              help="Include to request pickup")
-@click.argument("pizza", type=click.Choice(current_menu.choice))
+@click.option('--delivery', default=False, is_flag=True,
+              help='Include to request delivery')
+@click.option('--pickup', default=False, is_flag=True,
+              help='Include to request pickup')
+@click.argument('pizza', type=click.Choice(current_menu.choice))
 @log()
 def order(pizza: str, delivery: bool, pickup: bool) -> None:
     """Обработка заказа пиццы
@@ -31,8 +31,8 @@ def order(pizza: str, delivery: bool, pickup: bool) -> None:
         ValueError: Выбрана и доставка, и самовывоз, или ни то, ни другое
     """
     if delivery == pickup:
-        easter_egg = "\u0336" + "\u0336".join("Чел, либо крестик сними, либо.")
-        msg = "Should choose one of delivery or pickup at the same time"
+        easter_egg = '\u0336' + '\u0336'.join('Чел, либо крестик сними, либо.')
+        msg = 'Should choose one of delivery or pickup at the same time'
         raise ValueError(easter_egg + msg)
 
     pizza_instance = current_menu[pizza]()
@@ -44,21 +44,21 @@ def order(pizza: str, delivery: bool, pickup: bool) -> None:
         pick_up(pizza_instance)
 
 
-@log("Приготовили за {} с!")
+@log('Приготовили за {} с!')
 @random_delay
 def bake(pizza: Pizza) -> None:
     """Выпекает пиццу"""
     pizza.baked = True
 
 
-@log("Доставили за {} с!")
+@log('Доставили за {} с!')
 @random_delay
 def deliver(pizza: Pizza) -> None:
     """Доставляет пиццу"""
     pizza.handled = True
 
 
-@log("Отдали за {} с!")
+@log('Отдали за {} с!')
 @random_delay
 def pick_up(pizza: Pizza) -> None:
     """Отдает пиццу клиенту"""
@@ -71,5 +71,5 @@ def menu() -> None:
     print(current_menu.display())
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     cli()

@@ -3,7 +3,7 @@ from functools import wraps
 from typing import Callable, Any
 
 
-def log(template: str = "Выполнили за {} секунд!!") -> Callable:
+def log(template: str = 'Выполнили за {} секунд!!') -> Callable:
     """Декоратор логирует время выполнения функции
 
     Аргументы:

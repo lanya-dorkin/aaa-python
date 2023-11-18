@@ -11,9 +11,9 @@ class Margherita(Pizza):
         name (str): Название
     """
 
-    recipe = ["tomato sauce", "mozzarella", "tomatoes"]
-    emoji = "🧀"
-    name = "Margherita"
+    recipe = ['tomato sauce', 'mozzarella', 'tomatoes']
+    emoji = '🧀'
+    name = 'Margherita'
 
 
 class Pepperoni(Pizza):
@@ -26,9 +26,9 @@ class Pepperoni(Pizza):
         name (str): Название
     """
 
-    recipe = ["tomato sauce", "mozzarella", "pepperoni"]
-    emoji = "🍕"
-    name = "Pepperoni"
+    recipe = ['tomato sauce', 'mozzarella', 'pepperoni']
+    emoji = '🍕'
+    name = 'Pepperoni'
 
 
 class Hawaiian(Pizza):
@@ -41,9 +41,9 @@ class Hawaiian(Pizza):
         name (str): Название
     """
 
-    recipe = ["tomato sauce", "mozzarella", "chicken", "pineapples"]
-    emoji = "🍍"
-    name = "Hawaiian"
+    recipe = ['tomato sauce', 'mozzarella', 'chicken', 'pineapples']
+    emoji = '🍍'
+    name = 'Hawaiian'
 
 
 class Barcelona(Pizza):
@@ -56,9 +56,9 @@ class Barcelona(Pizza):
         name (str): Название
     """
 
-    recipe = ["tomato sauce", "mozzarella", "chorizo", "bell peppers", "olives"]
-    emoji = "🤌"
-    name = "Barcelona"
+    recipe = ['tomato sauce', 'mozzarella', 'chorizo', 'bell pepper', 'olives']
+    emoji = '🤌'
+    name = 'Barcelona'
 
 
 class Myasnaya(Pizza):
@@ -71,6 +71,6 @@ class Myasnaya(Pizza):
         name (str): Название
     """
 
-    recipe = ["tomato sauce", "mozzarella", "sausage", "bacon", "ham"]
-    emoji = "🥩"
-    name = "Myasnaya"
+    recipe = ['tomato sauce', 'mozzarella', 'sausage', 'bacon', 'ham']
+    emoji = '🥩'
+    name = 'Myasnaya'

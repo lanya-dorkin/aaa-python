@@ -18,13 +18,13 @@ class Menu:
     """
 
     default_mapping = {
-        "margherita": Margherita,
-        "pepperoni": Pepperoni,
-        "hawaiian": Hawaiian,
-        "barcelona": Barcelona,
-        "myasnaya": Myasnaya,
+        'margherita': Margherita,
+        'pepperoni': Pepperoni,
+        'hawaiian': Hawaiian,
+        'barcelona': Barcelona,
+        'myasnaya': Myasnaya,
     }
-    default_title = "МЕНЮ НАШЕЙ ЗАМЕЧАТЕЛЬНОЙ ПИЦЦЕРИИ:"
+    default_title = 'МЕНЮ НАШЕЙ ЗАМЕЧАТЕЛЬНОЙ ПИЦЦЕРИИ:'
 
     def __init__(self, menu: dict = None, title: str = None) -> None:
         """Инициализирует объект класса Menu
@@ -46,7 +46,7 @@ class Menu:
         """Возвращает строковое представление меню"""
         menu = [self._title]
         menu.extend([str(pizza()) for pizza in self._mapping.values()])
-        return "\n".join(menu).strip()
+        return '\n'.join(menu).strip()
 
     def __getitem__(self, name: str) -> Pizza:
         """Получает объект пиццы по имени из меню
@@ -62,6 +62,6 @@ class Menu:
         """
         result = self._mapping.get(name, None)
         if result is None:
-            msg = f"Сегодня {name} не привезли!"
+            msg = f'Сегодня {name} не привезли!'
             raise ValueError(msg)
         return result
