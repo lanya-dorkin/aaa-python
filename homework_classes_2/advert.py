@@ -47,7 +47,18 @@ class AdFields(UserDict, UserList):
         return self.get(name)
 
 
-class Advert:
+class ColorizeMixin:
+    def __init_subclass__(cls, color_code: int) -> None:
+        cls.color_code = color_code
+
+    def __repr__(self) -> str:
+        prefix = f'\033[1;{self.color_code};40m'
+        postfix = '\033[0m'
+        text = f'{self.title} | {self.price} ₽'
+        return f'{prefix}{text}{postfix}'
+
+
+class Advert(ColorizeMixin, color_code=33):
     """
     Класс Advert представляет собой объявления с доступом к полям через точку
     и валидацией обязательных полей title и price.
@@ -90,3 +101,4 @@ if __name__ == '__main__':
     print(dog_ad.title)
     print(dog_ad.price)
     print(dog_ad.class_)
+    print(dog_ad)
