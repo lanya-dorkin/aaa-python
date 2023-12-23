@@ -9,7 +9,7 @@ class ComputerColor(ABC):
     @abstractmethod
     def __mul__(self, other):
         raise NotImplementedError
-    
+
     @abstractmethod
     def __rmul__(self, other):
         raise NotImplementedError
@@ -53,7 +53,7 @@ class Color(ComputerColor):
             Color.lower_contrast(other, self.green),
             Color.lower_contrast(other, self.blue)
         )
-    
+
     def __mul__(self, other):
         return self * other
 
