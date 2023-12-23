@@ -5,7 +5,7 @@ class PokemonTrainInterface(ABC):
     @abstractmethod
     def increase_experience(self, value: int) -> None:
         raise NotImplementedError
-    
+
     @property
     @abstractmethod
     def experience(self) -> int:
@@ -13,14 +13,14 @@ class PokemonTrainInterface(ABC):
 
 
 class BasePokemon(PokemonTrainInterface):
-    def __init__(self, name: str, poketype: str, experience: int = 100): 
+    def __init__(self, name: str, poketype: str, experience: int = 100):
         self.name = name
         self.poketype = poketype
         self._experience = experience
 
     def increase_experience(self, value: int) -> None:
         self._experience += value
-    
+
     @property
     def experience(self) -> int:
         return self._experience
@@ -44,7 +44,7 @@ class Pokemon(EmojiMixin, BasePokemon):
 
 
 if __name__ == '__main__':
-    bulbasaur = Pokemon(name='Bulbasaur', poketype='grass') 
+    bulbasaur = Pokemon(name='Bulbasaur', poketype='grass')
     print(bulbasaur)
 
     bulbasaur.increase_experience(200)
